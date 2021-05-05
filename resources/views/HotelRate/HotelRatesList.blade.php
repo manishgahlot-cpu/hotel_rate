@@ -83,7 +83,7 @@
         </tbody>
     </table>
 
-    <a href="addHotelRate" >Add New Hotel Rate </a>
+    <a href="addHotelRate" type="button" class="btn btn-info" >Add New Hotel Rate </a>
 
 </div>
 

@@ -15,7 +15,7 @@
 
     <div class = "form-group">
     <lable for="name"> Hotel  :</lable>
-    <select name ="hotel_id" required>
+    <select name ="hotel_id" required class="custom-select">
         <option value="">Select Hotel</option>
 
         @foreach($hotels as $hotel)
@@ -50,7 +50,7 @@
         <input type ="number" name='no_child' required class= 'form-control' placeholder="Enter No child"/>
     </div>
 
-    <button type="submit" class = "btn-primary">Add User<button>
+    <button type="submit" class = "btn btn-info">Add User</button>
 
 </div>
 </form>

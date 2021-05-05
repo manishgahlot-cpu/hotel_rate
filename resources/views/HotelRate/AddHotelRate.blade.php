@@ -10,7 +10,7 @@
 
     <div class = "form-group">
     <lable for="name"> Hotel  :</lable>
-    <select name ="hotel_id" required>
+    <select name ="hotel_id" required class="custom-select">
         <option value="">Select Hotel</option>
 
         @foreach($hotels as $hotel)
@@ -42,7 +42,7 @@
     </div>
 
 
-    <button type="submit" class = "btn-primary">Add <button>
+    <button type="submit" class = " btn btn-info">Add</button>
 
 </div>
 </form>

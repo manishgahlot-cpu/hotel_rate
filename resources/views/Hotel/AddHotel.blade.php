@@ -23,7 +23,7 @@
         <input type ="number" name='star' required class= 'form-control' placeholder="Enter star"/>
     </div>
 
-    <button type="submit" class = "btn-primary">Add <button>
+    <button type="submit" class = "btn btn-info">Add </button>
 
 </div>
 </form>

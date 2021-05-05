@@ -23,7 +23,7 @@
         <input type ="number" name='star' required value="{{$data->star}}" class= 'form-control' placeholder="Enter star"/>
     </div>
 
-    <button type="submit" class = "btn-primary">Update Hotel <button>
+    <button type="submit" class = "btn btn-info">Update Hotel </button>
 
 </div>
 </form>

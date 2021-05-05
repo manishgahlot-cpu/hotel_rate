@@ -10,7 +10,7 @@
 
     <div class = "form-group">
     <lable for="name"> Hotel  :</lable>
-    <select name ="hotel_id" required>
+    <select name ="hotel_id" required class="custom-select">
         <option value="{{$data->hotel_id}}">{{$data->hotel_name}}</option>
 
         @foreach($hotels as $hotel)

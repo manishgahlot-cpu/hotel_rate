@@ -81,7 +81,7 @@
 
             
             <td>
-            {{$i->checkoout_date}}
+            {{$i->checkout_date}}
             </td>
 
             <td>
@@ -96,7 +96,7 @@
         </tbody>
     </table>
 
-    <a href="addUser" >Add New User </a>
+    <a href="addUser" type="button" class="btn btn-info">Add New User </a>
 
 </div>
 
