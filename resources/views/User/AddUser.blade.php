@@ -13,16 +13,6 @@
         <input type ="text" name='name' required class= 'form-control' placeholder="Enter Name"/>
     </div>
 
-    <div class = "form-group">
-    <lable for="name"> Hotel  :</lable>
-    <select name ="hotel_id" required class="custom-select">
-        <option value="">Select Hotel</option>
-
-        @foreach($hotels as $hotel)
-        <option value="{{$hotel->id}}">{{$hotel->name}}</option>
-        @endforeach
-    </select>
-    </div>
 
 
 

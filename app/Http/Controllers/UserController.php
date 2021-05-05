@@ -23,29 +23,19 @@ class UserController extends Controller
         $newUser->hotel_id = $request->hotel_id;
        
         // calcultae total price 
-        $hotelRates = HotelRate::where('hotel_id','=',$request->hotel_id)->get();
-        //return $hotelRates;
+        $hotelRates = HotelRate::whereDate('start_date','<=',$request->checkin_date)->whereDate('end_date','>=',$request->checkout_date)->get();
+        
 
         foreach($hotelRates as $hotelRate)
         {
-            if(($hotelRate->start_date <= $request->checkin_date) && ($hotelRate->end_date >= $request->checkin_date))
-            {
-                $newUser->total_price = ($request->no_adult * $hotelRate->adult_rate) + ($request->no_child * $hotelRate->child_rate);
-
-                if($newUser->save())
-                {
-                    return redirect('user');
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return "manish";
-            }
+            $hotel = Hotel::find($hotelRate->hotel_id);
+            $hotelRate->hotel_name = $hotel->name;
+            $hotelRate->hotel_star = $hotel->star;
+           $hotelRate->adult_price = $request->no_adult * $hotelRate->adult_rate;
+           $hotelRate->child_price = $request->no_child * $hotelRate->child_rate;
+           $hotelRate->total_price = $hotelRate->child_price + $hotelRate->adult_price;
         }
+        return view('User/HotelRateView',['data'=>$hotelRates]);
 
       
 

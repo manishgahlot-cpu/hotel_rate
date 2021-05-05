@@ -72,5 +72,7 @@ Route::get('deleteHotelRate/{id}',"HotelRateController@delete")->name('deleteHot
 Route::get('addUser',"UserController@add")->name('addUser');
 Route::Post('insertUser',"UserController@insert")->name('insertUser');
 Route::get('user',"UserController@list")->name('user');
-
+Route::get('/HoteRates', function () {
+    return view('User/HotelRateView');
+});
 

@@ -19,8 +19,18 @@
     </div>
 
     <div class = "form-group">
-        <lable for="star"> Star :</lable>
-        <input type ="number" name='star' required class= 'form-control' placeholder="Enter star"/>
+    <lable for="name"> Hotel  :</lable>
+    <select name ="star" required class="custom-select">
+        <option value="">Select Star</option>
+
+        
+        <option value="3">3 Star</option>
+        <option value="4">4 Star</option>
+        <option value="5"> 5 Star</option>
+        <option value="7"> 7 Star</option>
+    
+    </select>
+
     </div>
 
     <button type="submit" class = "btn btn-info">Add </button>
